@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    scrollbar-color: var(--d-page-primary-color) transparent;
+    scrollbar-width: thin;
+}
+
+.no-transition {
+    transition: none!important;
+}

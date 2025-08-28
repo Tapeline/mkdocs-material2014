@@ -1,0 +1,39 @@
+site_name: Test material
+repo_url: https://github.com
+nav:
+  - Home: index2.md
+  - Getting started:
+      - Home: index.md
+      - Hub: hub.md
+      - Protocol: protocol.md
+  - Test:
+      - Test page: test/test.md
+      - Admonitions: test/admonitions.md
+
+theme:
+  name: null
+  custom_dir: 'site/'
+
+markdown_extensions:
+  - toc:
+      toc_depth: 3
+  - mdx_include:
+      base_path: .
+      line_slice_separator: []
+  - extra
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - def_list
+
