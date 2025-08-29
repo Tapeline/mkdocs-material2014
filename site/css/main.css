@@ -8,3 +8,19 @@
 .no-transition {
     transition: none!important;
 }
+
+main {
+    min-height: calc(100vh - 64px);
+    @media only screen and (max-width: 600px) {
+        min-height: calc(100vh - 56px);
+    }
+    display: flex;
+    flex-direction: column;
+    > * {
+        width: 100%;
+    }
+}
+
+a {
+    color: var(--d-page-primary-color);
+}

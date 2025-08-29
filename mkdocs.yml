@@ -1,5 +1,6 @@
 site_name: Test material
 repo_url: https://github.com
+copyright: "&copy; Tapeline 2025"
 nav:
   - Home: index2.md
   - Getting started:
@@ -9,10 +10,23 @@ nav:
   - Test:
       - Test page: test/test.md
       - Admonitions: test/admonitions.md
+      - Code: test/code.md
+      - Content tabs: test/content-tabs.md
+      - Diagrams: test/diagrams.md
+      - Footnotes: test/footnotes.md
+      - Formatting: test/formatting.md
+      - Math: test/math.md
+      - Task list: test/tasklist.md
+      - Term list: test/termlist.md
 
 theme:
   name: null
   custom_dir: 'site/'
+  primary_color: "#E91E63"
+
+plugins:
+  - mermaid2
+  - ezglossary
 
 markdown_extensions:
   - toc:
@@ -23,17 +37,19 @@ markdown_extensions:
   - extra
   - admonition
   - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-  - pymdownx.tabbed:
-      alternate_style: true
   - attr_list
   - md_in_html
   - def_list
-
+  - material1.extensions.tabbed
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - mdx_math

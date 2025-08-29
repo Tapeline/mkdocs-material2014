@@ -8,12 +8,11 @@
   {%- endfor %}
   <style>
     :root {
-        /*--d-page-primary-color: #ff9800*/
-        --d-page-primary-color: #039be5;
+        --d-page-primary-color: {{ config.theme.primary_color }};
     }
   </style>
+  <script>var base_url = {{ base_url|tojson }};</script>
   <link rel="stylesheet" href="/materialize-build/css/materialize.css">
-  <link rel="stylesheet" href="/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script
     src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
@@ -21,6 +20,10 @@
     crossorigin="anonymous"></script>
   <script src="/materialize-build/js/materialize.js"></script>
   <script src="/script.js"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -96,9 +99,11 @@
   </div>
   <div class="d-sidebar-footer">
     <div class="d-sidebar-footer-links">
-      <a href="" class="">GitHub</a>
+      {% if config.repo_url %}
+      <a href="{{ config.repo_url }}" class="">Repository</a>
+      {% endif %}
     </div>
-    <span class="d-sidebar-footer-copy">&copy; Copyright Tapeline 2025</span>
+    <span class="d-sidebar-footer-copy">{{ config.copyright }}</span>
   </div>
 </div>
 
@@ -152,5 +157,7 @@
 {%- for script in config.extra_javascript %}
   {{ script | script_tag }}
 {%- endfor %}
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>

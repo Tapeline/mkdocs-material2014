@@ -19,6 +19,10 @@ $(document).ready(function () {
         offset: 64
     })
     $('h1,h2,h3,.scollspy').scrollSpy();
+    $('.tabs').tabs({
+        swipeable: true,
+        duration: 200
+    });
 });
 
 $(document).scroll(function () {

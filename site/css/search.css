@@ -36,7 +36,7 @@
     input {
         width: 360px!important;
         @media only screen and (max-width: 600px) {
-            width: 240px !important;
+            width: 200px !important;
         }
     }
 }

@@ -5,12 +5,13 @@
   <title>Title</title>
   <style>
     :root {
-        /*--d-page-primary-color: #ff9800*/
-        --d-page-primary-color: #039be5;
+        --d-page-primary-color: #ff9800;
+        /*--d-page-primary-color: #039be5;*/
+        --d-page-primary-color: #8BC34A;
+        --d-page-primary-color: #E91E63;
     }
   </style>
   <link rel="stylesheet" href="materialize-build/css/materialize.css">
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script
     src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
@@ -18,6 +19,10 @@
     crossorigin="anonymous"></script>
   <script src="materialize-build/js/materialize.js"></script>
   <script src="script.js"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -152,21 +157,19 @@
         Something smart shall be written here.
         Something smart shall be written here.</p>
       </div>
-      <h2 id="4">Some other things</h2>
-      <p>
-        Something smart shall be written here.
-        Something smart shall be written here.
-        Something smart shall be written here.
-        Something smart shall be written here.
-      </p>
+      <h2 id="4">Content tabs</h2>
+      <div class="tabbed-set">
+        <ul class="tabs">
+          <li class="tab"><a href="#test-swipe-1">Test 1</a></li>
+          <li class="tab"><a class="active" href="#test-swipe-2">Test 2</a></li>
+          <li class="tab"><a href="#test-swipe-3">Test 3</a></li>
+        </ul>
+        <div id="test-swipe-1" class="col s12">Test 1</div>
+        <div id="test-swipe-2" class="col s12">Test 2</div>
+        <div id="test-swipe-3" class="col s12">Test 3</div>
+      </div>
+
       <h2 id="5">Some other things</h2>
-      <p>
-        Something smart shall be written here.
-        Something smart shall be written here.
-        Something smart shall be written here.
-        Something smart shall be written here.
-      </p>
-      <h2 id="6">Some other things</h2>
       <p>
         Something smart shall be written here.
         Something smart shall be written here.
@@ -221,6 +224,7 @@
     </a>
   </div>
 </main>
-
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>
