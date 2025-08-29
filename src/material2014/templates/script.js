@@ -20,8 +20,8 @@ $(document).ready(function () {
     })
     $('h1,h2,h3,.scollspy').scrollSpy();
     $('.tabs').tabs({
-        swipeable: true,
-        duration: 200
+        swipeable: false,
+        duration: 150
     });
 });
 

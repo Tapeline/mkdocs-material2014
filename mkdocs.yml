@@ -1,13 +1,14 @@
 site_name: Test material
-repo_url: https://github.com
-copyright: "&copy; Tapeline 2025"
+repo_url: https://github.com/Tapeline/material1-doc
+copyright: "&copy; Copyright Tapeline 2025"
 nav:
-  - Home: index2.md
+  - Home: index.md
   - Getting started:
-      - Home: index.md
-      - Hub: hub.md
-      - Protocol: protocol.md
-  - Test:
+      - Installing: get_started/install.md
+      - Create docs: get_started/create.md
+      - Publish docs: get_started/publish.md
+      - Customize docs: get_started/customize.md
+  - Demo:
       - Test page: test/test.md
       - Admonitions: test/admonitions.md
       - Code: test/code.md
@@ -15,12 +16,11 @@ nav:
       - Diagrams: test/diagrams.md
       - Footnotes: test/footnotes.md
       - Formatting: test/formatting.md
-      - Math: test/math.md
       - Task list: test/tasklist.md
       - Term list: test/termlist.md
 
 theme:
-  name: material1
+  name: material2014
   primary_color: "#E91E63"
 
 plugins:
@@ -30,9 +30,6 @@ plugins:
 markdown_extensions:
   - toc:
       toc_depth: 3
-  - mdx_include:
-      base_path: .
-      line_slice_separator: []
   - extra
   - admonition
   - pymdownx.details
@@ -43,7 +40,7 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - def_list
-  - material1.extensions.tabbed
+  - material2014.extensions.tabbed
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
@@ -51,4 +48,3 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.tasklist:
       custom_checkbox: true
-  - mdx_math

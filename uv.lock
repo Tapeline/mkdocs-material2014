@@ -77,15 +77,6 @@ wheels = [
 ]
 
 [[package]]
-name = "cyclic"
-version = "1.0.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/bf/9f/becc4fea44301f232e4eba17752001bd708e3c042fef37a72b9af7ddf4b5/cyclic-1.0.0.tar.gz", hash = "sha256:ecddd56cb831ee3e6b79f61ecb0ad71caee606c507136867782911aa01c3e5eb", size = 2167 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/c0/c0/9f59d2ebd9d585e1681c51767eb138bcd9d0ea770f6fc003cd875c7f5e62/cyclic-1.0.0-py3-none-any.whl", hash = "sha256:32d8181d7698f426bce6f14f4c3921ef95b6a84af9f96192b59beb05bc00c3ed", size = 2547 },
-]
-
-[[package]]
 name = "editorconfig"
 version = "0.17.1"
 source = { registry = "https://pypi.org/simple" }
@@ -212,20 +203,6 @@ wheels = [
 ]
 
 [[package]]
-name = "mdx-include"
-version = "1.4.2"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "cyclic" },
-    { name = "markdown" },
-    { name = "rcslice" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/bf/f0/f395a9cf164471d3c7bbe58cbd64d74289575a8b85a962b49a804ab7ed34/mdx_include-1.4.2.tar.gz", hash = "sha256:992f9fbc492b5cf43f7d8cb4b90b52a4e4c5fdd7fd04570290a83eea5c84f297", size = 15051 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/c0/40/6844997dee251103c5a4c4eb0d1d2f2162b7c29ffc4e86de3cd68d269be2/mdx_include-1.4.2-py3-none-any.whl", hash = "sha256:cfbeadd59985f27a9b70cb7ab0a3d209892fe1bb1aa342df055e0b135b3c9f34", size = 11591 },
-]
-
-[[package]]
 name = "mergedeep"
 version = "1.3.4"
 source = { registry = "https://pypi.org/simple" }
@@ -333,24 +310,30 @@ wheels = [
 ]
 
 [[package]]
-name = "mkdocs-mermaid-plugin"
-version = "0.1.1"
-source = { registry = "https://pypi.org/simple" }
+name = "mkdocs-material2014"
+version = "0.0.2"
+source = { editable = "." }
 dependencies = [
     { name = "mkdocs" },
+    { name = "mkdocs-autorefs" },
+    { name = "mkdocs-ezglossary-plugin" },
+    { name = "mkdocs-literate-nav" },
+    { name = "mkdocs-macros-plugin" },
+    { name = "mkdocs-mermaid2-plugin" },
+    { name = "mkdocstrings", extra = ["python"] },
+    { name = "pymdown-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c5/92/4f8bd0c107b44a0cf03e689b1902b04736ba877a09aefe8d98962bbb95f3/mkdocs-mermaid-plugin-0.1.1.tar.gz", hash = "sha256:b761f49a37b251335efee5413306194705fd72dfa6b02380eb7a86b0f68f8de9", size = 2025 }
 
-[[package]]
-name = "mkdocs-mermaid-zoom"
-version = "0.1.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "mkdocs" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/cc/18/d37df48c3200a624c509121a9ecff947700793ca1a750dcdff812c30011a/mkdocs_mermaid_zoom-0.1.0.tar.gz", hash = "sha256:115287e0fdf444a82d8a4cbcf737f0fc827afe7972b5cd441e106f8d9f039967", size = 996169 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/31/28/aabcf8e6f8de4af9544ef22e512f211d96008def730269ff8fafe152353d/mkdocs_mermaid_zoom-0.1.0-py3-none-any.whl", hash = "sha256:3908a3bba3ccdc3ab744e4374e8f196219ad846bbc8b710ccc3b0e98f3ecbb68", size = 6233 },
+[package.metadata]
+requires-dist = [
+    { name = "mkdocs", specifier = ">=1.6.1" },
+    { name = "mkdocs-autorefs", specifier = ">=1.4.2" },
+    { name = "mkdocs-ezglossary-plugin", specifier = ">=2.0.0" },
+    { name = "mkdocs-literate-nav", specifier = "==0.6.2" },
+    { name = "mkdocs-macros-plugin", specifier = "==1.3.7" },
+    { name = "mkdocs-mermaid2-plugin", specifier = ">=1.2.1" },
+    { name = "mkdocstrings", extras = ["python"], specifier = "==0.29.1" },
+    { name = "pymdown-extensions", specifier = ">=10.16.1" },
 ]
 
 [[package]]
@@ -468,18 +451,6 @@ wheels = [
 ]
 
 [[package]]
-name = "python-markdown-math"
-version = "0.9"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "markdown" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/4c/68/fbea05ec6fb318bdcf56ea47596605614554f51d77bfd14f6fb481139ad8/python_markdown_math-0.9.tar.gz", hash = "sha256:567395553dc4941e79b3789a1096dcabb3fda9539d150d558ef3507948b264a3", size = 8680 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/eb/68/ecf3535c40845de2efd8ac2d092dd5fca0868219fa3684d9e58ef7abeece/python_markdown_math-0.9-py3-none-any.whl", hash = "sha256:ac9932df517a5c0f6d01c56e7a44d065eca4a420893ac45f7a6937c67cb41e86", size = 6046 },
-]
-
-[[package]]
 name = "pyyaml"
 version = "6.0.2"
 source = { registry = "https://pypi.org/simple" }
@@ -506,15 +477,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/eb/2e/79c822141bfd05a853236b504869ebc6b70159afc570e1d5a20641782eaa/pyyaml_env_tag-1.1.tar.gz", hash = "sha256:2eb38b75a2d21ee0475d6d97ec19c63287a7e140231e4214969d0eac923cd7ff", size = 5737 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/04/11/432f32f8097b03e3cd5fe57e88efb685d964e2e5178a48ed61e841f7fdce/pyyaml_env_tag-1.1-py3-none-any.whl", hash = "sha256:17109e1a528561e32f026364712fee1264bc2ea6715120891174ed1b980d2e04", size = 4722 },
-]
-
-[[package]]
-name = "rcslice"
-version = "1.1.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/53/3e/abe47d91d5340b77b003baf96fdf8966c946eb4c5a704a844b5d03e6e578/rcslice-1.1.0.tar.gz", hash = "sha256:a2ce70a60690eb63e52b722e046b334c3aaec5e900b28578f529878782ee5c6e", size = 4414 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/aa/96/7935186fba032312eb8a75e6503440b0e6de76c901421f791408e4debd93/rcslice-1.1.0-py3-none-any.whl", hash = "sha256:1b12fc0c0ca452e8a9fd2b56ac008162f19e250906a4290a7e7a98be3200c2a6", size = 5180 },
 ]
 
 [[package]]
@@ -578,41 +540,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/ca/6c/3d75c196ac07ac8749600b60b03f4f6094d54e132c4d94ebac6ee0e0add0/termcolor-3.1.0.tar.gz", hash = "sha256:6a6dd7fbee581909eeec6a756cff1d7f7c376063b14e4a298dc4980309e55970", size = 14324 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/4f/bd/de8d508070629b6d84a30d01d57e4a65c69aa7f5abe7560b8fad3b50ea59/termcolor-3.1.0-py3-none-any.whl", hash = "sha256:591dd26b5c2ce03b9e43f391264626557873ce1d379019786f99b0c2bee140aa", size = 7684 },
-]
-
-[[package]]
-name = "true-material-doc"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "mdx-include" },
-    { name = "mkdocs" },
-    { name = "mkdocs-autorefs" },
-    { name = "mkdocs-ezglossary-plugin" },
-    { name = "mkdocs-literate-nav" },
-    { name = "mkdocs-macros-plugin" },
-    { name = "mkdocs-mermaid-plugin" },
-    { name = "mkdocs-mermaid-zoom" },
-    { name = "mkdocs-mermaid2-plugin" },
-    { name = "mkdocstrings", extra = ["python"] },
-    { name = "pymdown-extensions" },
-    { name = "python-markdown-math" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "mdx-include", specifier = "==1.4.2" },
-    { name = "mkdocs", specifier = ">=1.6.1" },
-    { name = "mkdocs-autorefs", specifier = ">=1.4.2" },
-    { name = "mkdocs-ezglossary-plugin", specifier = ">=2.0.0" },
-    { name = "mkdocs-literate-nav", specifier = "==0.6.2" },
-    { name = "mkdocs-macros-plugin", specifier = "==1.3.7" },
-    { name = "mkdocs-mermaid-plugin", specifier = ">=0.1.1" },
-    { name = "mkdocs-mermaid-zoom", specifier = ">=0.1.0" },
-    { name = "mkdocs-mermaid2-plugin", specifier = ">=1.2.1" },
-    { name = "mkdocstrings", extras = ["python"], specifier = "==0.29.1" },
-    { name = "pymdown-extensions", specifier = ">=10.16.1" },
-    { name = "python-markdown-math", specifier = ">=0.9" },
 ]
 
 [[package]]
