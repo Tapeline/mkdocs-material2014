@@ -20,8 +20,7 @@ nav:
       - Term list: test/termlist.md
 
 theme:
-  name: null
-  custom_dir: 'site/'
+  name: material1
   primary_color: "#E91E63"
 
 plugins:
