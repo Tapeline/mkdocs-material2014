@@ -1,6 +1,6 @@
 [project]
 name = "mkdocs-material2014"
-version = "0.0.2"
+version = "0.0.3"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
@@ -21,6 +21,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
+include-package-data = true
 
 [project.entry-points."mkdocs.themes"]
 material2014 = "material2014.templates"
