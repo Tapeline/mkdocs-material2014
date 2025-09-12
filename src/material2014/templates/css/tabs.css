@@ -15,3 +15,7 @@
 .tabs .indicator {
     background-color: var(--d-page-primary-color);
 }
+
+.d-tab {
+    margin-bottom: 1rem;
+}

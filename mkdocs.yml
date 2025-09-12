@@ -1,5 +1,5 @@
 site_name: Test material
-site_url: https://tapeline.github.io/mkdocs-material2014
+#site_url: https://tapeline.github.io/mkdocs-material2014
 repo_url: https://github.com/Tapeline/material1-doc
 copyright: "&copy; Copyright Tapeline 2025"
 nav:
@@ -8,8 +8,11 @@ nav:
       - Installing: get_started/install.md
       - Create docs: get_started/create.md
       - Publish docs: get_started/publish.md
+  - Usage:
+      - Configuration: usage/configuration.md
+      - Syntax: usage/syntax.md
   - Demo:
-      - Test page: test/test.md
+      - Demo page: test/test.md
       - Admonitions: test/admonitions.md
       - Code: test/code.md
       - Content tabs: test/content-tabs.md
@@ -22,6 +25,10 @@ nav:
 theme:
   name: material2014
   primary_color: "#E91E63"
+  section_color:
+    Getting started: "#009688"
+    Usage: "#9C27B0"
+    Demo: "#3F51B5"
 
 plugins:
   - mermaid2

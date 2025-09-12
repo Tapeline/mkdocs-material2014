@@ -223,7 +223,7 @@ class TabbedProcessor(BlockProcessor):
                 "div",
                 {
                     "id": f"tab_{tab_group_id}_{tab_head_id}",
-                    "class": "col s12"
+                    "class": "col s12 d-tab"
                 }
             )
         else:

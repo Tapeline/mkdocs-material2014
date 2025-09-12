@@ -8,7 +8,13 @@
   {%- endfor %}
   <style>
     :root {
+        {% if config.theme.page_color[page.url] %}
+        --d-page-primary-color: {{ config.theme.page_color[page.url] }};
+        {% elif config.theme.section_color[(page.parent or page).title] %}
+        --d-page-primary-color: {{ config.theme.section_color[(page.parent or page).title] }};
+        {% else %}
         --d-page-primary-color: {{ config.theme.primary_color }};
+        {% endif %}
     }
   </style>
   <script>var base_url = {{ base_url|tojson }};</script>

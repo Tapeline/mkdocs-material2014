@@ -1,6 +1,6 @@
 # Installing
 
-Just install mkdocs and mkdocs-material2014
+Just install mkdocs and mkdocs-material2014.
 
 ```shell
 pip install mkdocs mkdocs-material2014
@@ -9,13 +9,10 @@ pip install mkdocs mkdocs-material2014
 ## Recommended dependencies
 
 You can consider installing other dependencies, that will help your
-documentation greatly, such as:
+documentation greatly:
 
-- `mkdocstrings[python]`
-- `mkdocs-literate-nav`
-- `mkdocs-autorefs`
-- `mkdocs-ezglossary-plugin`
-- `mkdocs-mermaid2-plugin`
-- `pymdown-extensions`
+```shell
+pip install mkdocs-material2014[extras]
+```
 
 This documentation also uses them.
