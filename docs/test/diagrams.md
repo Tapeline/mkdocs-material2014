@@ -1,3 +1,9 @@
+---
+zoom-media:
+- img
+- .mermaid
+---
+
 # Mermaid diagrams
 
 ``` mermaid

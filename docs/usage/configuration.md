@@ -38,16 +38,19 @@ Override primary color for certain page.
 
 # Page config
 
-Each page can be configured with meta:
+Each page can be configured with meta (frontmatter):
 
 ```md
+---
 parameter: value
-
+---
 # My page
 ...
 ```
 
 ## `hide-toc`
+
+`true`/`false`.
 
 Hide table of contents (on the right).
 
@@ -55,6 +58,18 @@ Visible by default.
 
 ## `hide-footer`
 
+`true`/`false`.
+
 Hide footer prev/next navigation.
 
 Visible by default.
+
+## `zoom-media`
+
+`list of strings`
+
+List of CSS selectors of elements that will support zoom on click.
+
+Default: `["img"]`
+
+To disable, set to empty list.
