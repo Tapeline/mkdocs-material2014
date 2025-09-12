@@ -1,5 +1,5 @@
 site_name: Test material
-#site_url: https://tapeline.github.io/mkdocs-material2014
+site_url: https://tapeline.github.io/mkdocs-material2014
 repo_url: https://github.com/Tapeline/material1-doc
 copyright: "&copy; Copyright Tapeline 2025"
 nav:
@@ -33,6 +33,7 @@ theme:
 plugins:
   - mermaid2
   - ezglossary
+  - search
 
 markdown_extensions:
   - toc:
