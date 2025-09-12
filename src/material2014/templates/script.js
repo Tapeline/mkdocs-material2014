@@ -23,6 +23,13 @@ $(document).ready(function () {
         swipeable: false,
         duration: 150
     });
+    $('.mkdocs-ezglossary-link').addClass("tooltipped");
+    $('.mkdocs-ezglossary-link').each((i, obj) => {
+        obj = $(obj);
+        obj.attr("data-tooltip", obj.attr("title"));
+        obj.attr("title", null);
+    });
+    $('.tooltipped').tooltip();
 });
 
 $(document).scroll(function () {

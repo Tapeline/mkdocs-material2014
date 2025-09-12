@@ -1,4 +1,4 @@
-site_name: Test material
+site_name: MkDocs Material 2014
 site_url: https://tapeline.github.io/mkdocs-material2014
 repo_url: https://github.com/Tapeline/material1-doc
 copyright: "&copy; Copyright Tapeline 2025"
@@ -32,7 +32,8 @@ theme:
 
 plugins:
   - mermaid2
-  - ezglossary
+  - ezglossary:
+      tooltip: full
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
 
