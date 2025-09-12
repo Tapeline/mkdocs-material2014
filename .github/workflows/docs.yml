@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
       - name: Install dependencies
-        run: uv sync
+        run: uv sync --all-extras
       - name: Build docs
         run: uv run mkdocs build
       - name: Save artifact with build results
