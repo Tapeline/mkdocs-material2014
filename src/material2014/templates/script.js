@@ -5,11 +5,11 @@ $(document).ready(function () {
     });
     $(".d-search-button").click(e => {
         e.preventDefault();
-        $("nav").addClass("d-search-open");
+        $("body").addClass("d-search-open");
     });
     $(".d-search-close-button").click(e => {
         e.preventDefault();
-        $("nav").removeClass("d-search-open");
+        $("body").removeClass("d-search-open");
     });
     if (!$(".d-cool-page-start").length) {
         $('.navbar-fixed').removeClass("d-seamless-cool-page-navbar");

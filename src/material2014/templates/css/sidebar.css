@@ -59,6 +59,11 @@
 .d-sidebar-footer {
     padding: 12px 24px 12px 24px;
 
+    > * {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
     .d-sidebar-footer-links {
         display: flex;
         gap: 8px;
@@ -66,15 +71,11 @@
             color: rgb(97, 97, 97);
             font-size: 14px;
         }
-        margin-top: 4px;
-        margin-bottom: 4px;
     }
 
     .d-sidebar-footer-copy {
         color: rgb(97, 97, 97);
         font-size: 14px;
-        margin-top: 4px;
-        margin-bottom: 4px;
     }
 }
 

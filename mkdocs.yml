@@ -33,7 +33,8 @@ theme:
 plugins:
   - mermaid2
   - ezglossary
-  - search
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
 
 markdown_extensions:
   - toc:

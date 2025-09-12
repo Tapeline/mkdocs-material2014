@@ -18,13 +18,17 @@
     }
   </style>
   <script>var base_url = {{ base_url|tojson }};</script>
-  <link rel="stylesheet" href="{{config.site_url}}/materialize-build/css/materialize.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script
     src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
     integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
     crossorigin="anonymous"></script>
-  <script src="{{config.site_url}}/materialize-build/js/materialize.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
   <script src="{{config.site_url}}/script.js"></script>
   <link
     href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css"
@@ -47,7 +51,8 @@
         <span class="d-chapter-title d-hide-on-search">{{ page.title }}</span>
       </span>
       <div>
-        <form class="d-search-form inherit-nav-height">
+        {% if 'search' in config.plugins %}
+        <form class="d-search-form inherit-nav-height" action="search.html">
           <button class="btn-flat d-search-button inherit-nav-height">
             <i class="material-icons">search</i>
           </button>
@@ -55,17 +60,22 @@
             name="q"
             type="text"
             class="d-search-input inherit-nav-height"
-            id="search-input"
+            id="mkdocs-search-query"
             placeholder="Search"
             autocomplete="off"/>
           <button class="btn-flat d-search-close-button inherit-nav-height">
             <i class="material-icons">close</i>
           </button>
         </form>
+        {% endif %}
       </div>
     </div>
   </nav>
 </div>
+
+{% if 'search' in config.plugins %}
+<div class="d-search-results card" id="mkdocs-search-results"></div>
+{% endif %}
 
 <div id="slide-out" class="sidenav sidenav-fixed">
   <div>
@@ -126,5 +136,6 @@
 {%- endfor %}
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
 <script src="https://unpkg.com/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
 </body>
 </html>
