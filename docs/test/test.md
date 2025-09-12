@@ -110,7 +110,7 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ## Images
 
-![Minion](https://octodex.github.com/images/minion.png)
+![](https://octodex.github.com/images/original.png)
 
 ## [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
 

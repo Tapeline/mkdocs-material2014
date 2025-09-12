@@ -1,4 +1,4 @@
-# Configure theme
+# Global theme config
 
 mkdocs-material2014 supports following configuration options.
 
@@ -35,3 +35,26 @@ Override primary color for certain page.
     page_color:
         "some/url": "#009688"
     ```
+
+# Page config
+
+Each page can be configured with meta:
+
+```md
+parameter: value
+
+# My page
+...
+```
+
+## `hide-toc`
+
+Hide table of contents (on the right).
+
+Visible by default.
+
+## `hide-footer`
+
+Hide footer prev/next navigation.
+
+Visible by default.

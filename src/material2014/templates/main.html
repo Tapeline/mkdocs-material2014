@@ -6,6 +6,11 @@
     <span>{{ page.title }}</span>
   </div>
   <div class="d-page row">
+    {% if page.meta["hide-toc"] %}
+    <div class="d-content col s12 m8 l8">
+      {{ page.content }}
+    </div>
+    {% else %}
     <div class="d-content col s12 m8 l8">
       {{ page.content }}
     </div>
@@ -22,7 +27,10 @@
         </ul>
       </div>
     </div>
+    {% endif %}
   </div>
+  {% if page.meta["hide-footer"] %}
+  {% else %}
   <div class="d-footer-nav-buttons row">
     {% if page.previous_page %}
     <a class="d-footer-nav-left col s1 m6" href="{{page.previous_page.url|url}}">
@@ -47,5 +55,6 @@
     <a class="d-footer-nav-right col s1 m6" href="#"></a>
     {% endif %}
   </div>
+  {% endif %}
 </main>
 {% endblock %}

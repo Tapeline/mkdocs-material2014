@@ -15,4 +15,11 @@ documentation greatly:
 pip install mkdocs-material2014[extras]
 ```
 
+It will install:
+
+- `mkdocs-literate-nav`
+- `mkdocs-macros-plugin`
+- `mkdocs-ezglossary-plugin`
+- `mkdocs-mermaid2-plugin`
+
 This documentation also uses them.

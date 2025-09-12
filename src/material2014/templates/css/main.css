@@ -28,3 +28,7 @@ main {
 a {
     color: var(--d-page-primary-color);
 }
+
+.card-action a {
+    color: var(--d-page-primary-color)!important;
+}
