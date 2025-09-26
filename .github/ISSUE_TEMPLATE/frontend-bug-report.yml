@@ -1,0 +1,57 @@
+name: Frontend bug report
+description: Report a bug to help mkdocs-material2014 improve
+labels: ["bug", "frontend"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Bug report
+      
+  - type: textarea
+    id: descr
+    attributes:
+      label: Bug description
+      description: "A clear and concise description of what went wrong. It's better to include screenshots."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: "What should one do to reproduce this bug"
+      placeholder: |
+        1. Open '...'
+        2. Click '....'
+        3. Get an error
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected
+    attributes:
+      label: Debug info
+      description: |
+        Please copy&paste content from [debug page](https://tapeline.github.io/mkdocs-material2014/debug/). 
+
+        Attention! Please ensure that `Media state: ` is copied too. If not, please, append manually.
+      placeholder: |
+        Client info
+        User-Agent: 
+        ...
+
+        .userAgentData = {
+          "brands": [ ...
+        CSS @media
+        Media state: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional info
+    validations:
+      required: false
+
