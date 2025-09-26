@@ -3,6 +3,7 @@ pre, code {
     * {
         font-family: "JetBrains Mono", sans-serif !important;
     }
+    overflow: scroll;
 }
 
 pre.highlight {

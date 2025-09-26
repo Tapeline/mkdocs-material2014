@@ -36,6 +36,16 @@ Override primary color for certain page.
         "some/url": "#009688"
     ```
 
+## `footer_links`
+
+Links to place in sidebar footer.
+
+!!! example
+    ```yaml
+    footer_links:
+        Debug page: /debug
+    ```
+
 # Page config
 
 Each page can be configured with meta (frontmatter):

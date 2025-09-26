@@ -122,6 +122,9 @@
       {% if config.repo_url %}
       <a href="{{ config.repo_url }}" class="">Repository</a>
       {% endif %}
+      {% for title, href in config.theme.footer_links.items() %}
+      <a href="{{href|url}}">{{title}}</a>
+      {% endfor %}
     </div>
     <div><span class="d-sidebar-footer-copy">{{ config.copyright }}</span></div>
     <div>

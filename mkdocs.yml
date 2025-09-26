@@ -1,4 +1,5 @@
 site_name: MkDocs Material 2014
+dev_addr: 127.0.0.1:8000
 site_url: https://tapeline.github.io/mkdocs-material2014
 repo_url: https://github.com/Tapeline/mkdocs-material2014
 copyright: "&copy; Copyright Tapeline 2025"
@@ -29,6 +30,8 @@ theme:
     Getting started: "#009688"
     Usage: "#9C27B0"
     Demo: "#3F51B5"
+  footer_links:
+    Debug page: /mkdocs-material2014/debug
 
 plugins:
   - mermaid2
