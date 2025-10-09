@@ -30,6 +30,13 @@ $(document).ready(function () {
         obj.attr("title", null);
     });
     $('.tooltipped').tooltip();
+    $(".d-secondary-collapsible").each((i, obj) => {
+        const header = $(obj).children(".d-secondary-collapsible-header");
+        const content = $(obj).children(".d-secondary-collapsible-content");
+        $(header).click(() => {
+            $(obj).toggleClass("d-active");
+        })
+    })
 });
 
 $(document).scroll(function () {

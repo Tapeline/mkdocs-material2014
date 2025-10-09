@@ -13,7 +13,7 @@ nav:
       - Configuration: usage/configuration.md
       - Syntax: usage/syntax.md
   - Demo:
-      - Demo page: test/test.md
+      - Markdown demo page: test/test.md
       - Admonitions: test/admonitions.md
       - Code: test/code.md
       - Content tabs: test/content-tabs.md
@@ -22,7 +22,13 @@ nav:
       - Formatting: test/formatting.md
       - Task list: test/tasklist.md
       - Term list: test/termlist.md
-
+  - A very rich section:
+      - This section:
+          - Demonstrates: ""
+          - How 3-item deep menu: ""
+          - Will look like: ""
+      - Isn't it:
+          - Cool?: ""
 theme:
   name: material2014
   primary_color: "#E91E63"

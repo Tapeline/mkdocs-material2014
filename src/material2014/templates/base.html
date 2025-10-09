@@ -99,12 +99,25 @@
     <ul class="collapsible expandable">
       {% for nav_item in nav %}
       {% if nav_item.children %}
-      <li {% if nav_item.active %}class="active"{% endif %}>
+      <li {% if nav_item.active %}class="active" {% endif %}>
         <div class="collapsible-header">{{ nav_item.title }}</div>
         <div class="collapsible-body">
           <ul>
-            {% for nav_item in nav_item.children %}
-            <li><a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a></li>
+            {% for sub_item in nav_item.children %}
+            {% if sub_item.children %}
+            {% set count = sub_item.children|count %}
+            <div class="d-secondary-collapsible">
+              <div class="d-secondary-collapsible-header">{{sub_item.title}}</div>
+              <div class="d-secondary-collapsible-content"
+                style="--calc-max-h: {{48 * count}}px">
+                {% for sub_sub_item in sub_item.children %}
+                <li><a href="{{ sub_sub_item.url|url }}">{{ sub_sub_item.title }}</a></li>
+                {% endfor %}
+              </div>
+            </div>
+            {% else %}
+            <li><a href="{{ sub_item.url|url }}">{{ sub_item.title }}</a></li>
+            {% endif %}
             {% endfor %}
           </ul>
         </div>

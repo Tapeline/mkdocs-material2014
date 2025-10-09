@@ -82,3 +82,42 @@
 .d-sidebar-single-link a {
     padding-left: 24px!important;
 }
+
+.d-secondary-collapsible {
+    .d-secondary-collapsible-header {
+        padding-left: 32px;
+        height: 32px;
+        vertical-align: middle;
+        line-height: 32px;
+        &::before {
+            font-family: 'Material Icons', sans-serif;
+            display: inline-block;
+            content: "arrow_drop_down";
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    }
+    .d-secondary-collapsible-header:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .d-secondary-collapsible-content {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 200ms var(--mvt-acceleation-curve);
+        li a {
+            padding-left: 56px;
+        }
+    }
+
+    &.d-active {
+        .d-secondary-collapsible-content {
+            max-height: var(--calc-max-h);
+            /* TODO: fix this ^^^ */
+            transition: max-height 200ms var(--mvt-acceleation-curve);
+        }
+        .d-secondary-collapsible-header::before {
+            content: "arrow_drop_up";
+        }
+    }
+}

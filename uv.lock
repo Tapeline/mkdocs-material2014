@@ -97,6 +97,29 @@ wheels = [
 ]
 
 [[package]]
+name = "essentials"
+version = "1.1.8"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/5a/57/6e44c3a20d28fa381ccae3f588e16c54a627f3a61a008ddb1567c6f01891/essentials-1.1.8.tar.gz", hash = "sha256:e042e0b33d385cfc26e1f0cc189fce5570d0959a1983438a557e7963a87b5638", size = 25098 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/05/05/4db7e55b464d557634626d61ee0a0ba11467509befd4022bccfacef4a98e/essentials-1.1.8-py2.py3-none-any.whl", hash = "sha256:ae94a2a3992d490494e9c48430338a1adf0eb8c0079381dd9a759a3279054fc4", size = 16206 },
+]
+
+[[package]]
+name = "essentials-openapi"
+version = "1.2.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "essentials" },
+    { name = "markupsafe" },
+    { name = "pyyaml" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/54/4a/7379c77a0d3ee316a1f2ff3218942c2e272249a2ec9548bbb0ee5bbce25f/essentials_openapi-1.2.1.tar.gz", hash = "sha256:70b06d80a8d9cb7634b702903cfe8fcfc48e6fc054e744eab514bb7bc37f00c9", size = 33305 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/10/be/2963872265498da09800dc730a17a51a1c8f79c16cb29d8402425c21a96e/essentials_openapi-1.2.1-py3-none-any.whl", hash = "sha256:d0085cde3ceaa25e6fc4983d8372ac0185909e3fa2791f498280379bb3c86c62", size = 54167 },
+]
+
+[[package]]
 name = "ghp-import"
 version = "2.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -306,7 +329,7 @@ wheels = [
 
 [[package]]
 name = "mkdocs-material2014"
-version = "0.3.0"
+version = "0.4.0"
 source = { editable = "." }
 dependencies = [
     { name = "mkdocs" },
@@ -320,9 +343,13 @@ extras = [
     { name = "mkdocs-macros-plugin" },
     { name = "mkdocs-mermaid2-plugin" },
 ]
+openapi = [
+    { name = "essentials-openapi" },
+]
 
 [package.metadata]
 requires-dist = [
+    { name = "essentials-openapi", extras = ["openapi"], marker = "extra == 'openapi'", specifier = ">=1.2.1" },
     { name = "mkdocs", specifier = ">=1.6.1" },
     { name = "mkdocs-ezglossary-plugin", marker = "extra == 'extras'", specifier = ">=2.0.0" },
     { name = "mkdocs-literate-nav", marker = "extra == 'extras'", specifier = "==0.6.2" },
@@ -330,7 +357,7 @@ requires-dist = [
     { name = "mkdocs-mermaid2-plugin", marker = "extra == 'extras'", specifier = ">=1.2.1" },
     { name = "pymdown-extensions", specifier = ">=10.16.1" },
 ]
-provides-extras = ["extras"]
+provides-extras = ["extras", "openapi"]
 
 [[package]]
 name = "mkdocs-mermaid2-plugin"

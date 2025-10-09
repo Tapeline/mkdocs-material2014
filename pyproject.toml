@@ -16,6 +16,9 @@ extras = [
     "mkdocs-ezglossary-plugin>=2.0.0",
     "mkdocs-mermaid2-plugin>=1.2.1",
 ]
+openapi = [
+    "essentials-openapi[openapi]>=1.2.1",
+]
 
 [build-system]
 requires = ["setuptools >= 80.0.0"]
