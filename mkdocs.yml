@@ -22,6 +22,7 @@ nav:
       - Formatting: test/formatting.md
       - Task list: test/tasklist.md
       - Term list: test/termlist.md
+      - OpenAPI: test/openapi.md
   - A very rich section:
       - This section:
           - Demonstrates: ""
@@ -40,6 +41,8 @@ theme:
     Debug page: /mkdocs-material2014/debug
 
 plugins:
+  - macros:
+      module_name: macros
   - mermaid2
   - ezglossary:
       tooltip: full
