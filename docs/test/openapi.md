@@ -1,4 +1,3 @@
-## OpenAPI example
 
 !!! note
     This example was created using this macro

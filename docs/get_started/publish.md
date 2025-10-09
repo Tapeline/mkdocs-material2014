@@ -1,3 +1,7 @@
+---
+render_macros: false
+---
+
 # Build and publish
 
 When your documentation is ready, you might want to show it to the world.
