@@ -1,3 +1,6 @@
+---
+toc-depth: 4
+---
 
 !!! note
     This example was created using this macro

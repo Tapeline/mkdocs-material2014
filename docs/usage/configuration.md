@@ -83,3 +83,11 @@ List of CSS selectors of elements that will support zoom on click.
 Default: `["img"]`
 
 To disable, set to empty list.
+
+## `toc-depth`
+
+`number`, one of `1`, `2`, `3`, `4`
+
+Specifies how deep the ToC should be.
+
+Default: `2`
