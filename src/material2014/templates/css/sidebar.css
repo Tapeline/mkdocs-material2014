@@ -96,6 +96,7 @@
             margin-right: 8px;
             vertical-align: middle;
         }
+        cursor: pointer;
     }
     .d-secondary-collapsible-header:hover {
         background-color: rgba(0, 0, 0, 0.05);
