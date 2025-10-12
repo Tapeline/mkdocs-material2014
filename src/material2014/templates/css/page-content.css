@@ -61,7 +61,9 @@
     img {
         max-width: 95%;
     }
-
+    table {
+        overflow-x: scroll;
+    }
 }
 
 .material-tooltip {

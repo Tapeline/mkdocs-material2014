@@ -14,22 +14,16 @@ nav:
       - Syntax: usage/syntax.md
   - Demo:
       - Markdown demo page: test/test.md
-      - Admonitions: test/admonitions.md
-      - Code: test/code.md
-      - Content tabs: test/content-tabs.md
-      - Diagrams: test/diagrams.md
-      - Footnotes: test/footnotes.md
-      - Formatting: test/formatting.md
-      - Task list: test/tasklist.md
-      - Term list: test/termlist.md
-      - OpenAPI: test/openapi.md
-  - A very rich section:
-      - This section:
-          - Demonstrates: ""
-          - How 3-item deep menu: ""
-          - Will look like: ""
-      - Isn't it:
-          - Cool?: ""
+      - Components:
+          - Admonitions: test/admonitions.md
+          - Code: test/code.md
+          - Content tabs: test/content-tabs.md
+          - Diagrams: test/diagrams.md
+          - Footnotes: test/footnotes.md
+          - Formatting: test/formatting.md
+          - Task list: test/tasklist.md
+          - Term list: test/termlist.md
+          - OpenAPI: test/openapi.md
 theme:
   name: material2014
   primary_color: "#E91E63"

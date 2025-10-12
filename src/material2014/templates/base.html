@@ -12,6 +12,8 @@
         --d-page-primary-color: {{ config.theme.page_color[page.url] }};
         {% elif config.theme.section_color[(page.parent or page).title] %}
         --d-page-primary-color: {{ config.theme.section_color[(page.parent or page).title] }};
+        {% elif page.parent and page.parent.parent and config.theme.section_color[(page.parent.parent).title] %}
+        --d-page-primary-color: {{ config.theme.section_color[(page.parent.parent).title] }};
         {% else %}
         --d-page-primary-color: {{ config.theme.primary_color }};
         {% endif %}
@@ -46,6 +48,9 @@
           <i class="material-icons">menu</i>
         </a>
         {% if page.parent %}
+        {% if page.parent.parent %}
+        <span class="d-section-title d-hide-on-search">{{ page.parent.parent.title }} <b>–</b>&nbsp;</span>
+        {% endif %}
         <span class="d-section-title d-hide-on-search">{{ page.parent.title }} <b>–</b>&nbsp;</span>
         {% endif %}
         <span class="d-chapter-title d-hide-on-search">{{ page.title }}</span>
