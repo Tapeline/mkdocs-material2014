@@ -8,3 +8,5 @@ static_templates:
   - 404.html
 
 footer_links: {}
+
+syntax_scheme: material

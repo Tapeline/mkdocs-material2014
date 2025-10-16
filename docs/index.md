@@ -20,7 +20,7 @@ of original Material Design 1. So I've tried to create my own material theme.
             <p>Get to know capabilities of MkDocs Material 2014.</p>
           </div>
           <div class="card-action">
-            <a href="test/test">View examples</a>
+            <a href="demo/test">View examples</a>
           </div>
         </div>
     </div>

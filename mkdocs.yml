@@ -13,17 +13,17 @@ nav:
       - Configuration: usage/configuration.md
       - Syntax: usage/syntax.md
   - Demo:
-      - Markdown demo page: test/test.md
+      - Markdown demo page: demo/test.md
       - Components:
-          - Admonitions: test/admonitions.md
-          - Code: test/code.md
-          - Content tabs: test/content-tabs.md
-          - Diagrams: test/diagrams.md
-          - Footnotes: test/footnotes.md
-          - Formatting: test/formatting.md
-          - Task list: test/tasklist.md
-          - Term list: test/termlist.md
-          - OpenAPI: test/openapi.md
+          - Admonitions: demo/admonitions.md
+          - Code: demo/code.md
+          - Content tabs: demo/content-tabs.md
+          - Diagrams: demo/diagrams.md
+          - Footnotes: demo/footnotes.md
+          - Formatting: demo/formatting.md
+          - Task list: demo/tasklist.md
+          - Term list: demo/termlist.md
+          - OpenAPI: demo/openapi.md
 theme:
   name: material2014
   primary_color: "#E91E63"
@@ -33,6 +33,8 @@ theme:
     Demo: "#3F51B5"
   footer_links:
     Debug page: /mkdocs-material2014/debug
+    Testing: /mkdocs-material2014/test/home
+  syntax_scheme: material
 
 plugins:
   - macros:
@@ -52,6 +54,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - attr_list
   - md_in_html

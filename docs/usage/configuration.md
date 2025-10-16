@@ -46,6 +46,18 @@ Links to place in sidebar footer.
         Debug page: /debug
     ```
 
+
+## `syntax_scheme`
+
+Syntax scheme to use for highlighting. Options:
+
+- `material`
+- `primary-color`
+- `none` (use when you want to define custom scheme via css)
+
+Default: `material`
+
+
 # Page config
 
 Each page can be configured with meta (frontmatter):
