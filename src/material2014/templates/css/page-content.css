@@ -31,6 +31,19 @@
         padding-left: 14px;
         border-left: 2px solid var(--d-page-primary-color);
     }
+    .d-toc-wrapper {
+        max-height: calc(100dvh - 192px);
+        &.pinned {
+            padding-right: calc(64px + .75rem);
+        }
+        overflow-y: auto;
+        /*direction: rtl;*/
+        /*& > * {*/
+        /*    direction: ltr;*/
+        /*}*/
+        /*padding-left: 16px;*/
+        scrollbar-width: none;
+    }
 }
 
 .d-content {
