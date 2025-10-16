@@ -84,10 +84,13 @@
             width: 100%;
         }
     }
-    ul li {
+    ul:not(.tabs, .collection, .task-list) li {
         list-style: square!important;
     }
-    ul:not(.tabs, .collection) {
+    ul:not(.tabs, .collection, .task-list) {
+        padding-inline-start: 40px;
+    }
+    ul.task-list ul {
         padding-inline-start: 40px;
     }
 }

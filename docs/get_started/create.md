@@ -31,7 +31,10 @@ your documentation greatly:
 ```yml
 plugins:
   - mermaid2
-  - ezglossary
+  - ezglossary:
+      tooltip: full
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
 
 markdown_extensions:
   - toc:
@@ -39,9 +42,15 @@ markdown_extensions:
   - extra
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - attr_list
   - md_in_html

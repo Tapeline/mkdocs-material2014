@@ -6,11 +6,9 @@ zoom-media:
 
 # Mermaid diagrams
 
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
+```mermaid
+graph TD
+A[Client] --> B[Load Balancer]
+B --> C[Server01]
+B --> D[Server02]
 ```

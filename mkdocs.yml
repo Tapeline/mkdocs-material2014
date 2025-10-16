@@ -51,7 +51,11 @@ markdown_extensions:
   - extra
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
