@@ -10,3 +10,5 @@ static_templates:
 footer_links: {}
 
 syntax_scheme: material
+
+cool_page_start_only_section: true

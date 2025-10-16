@@ -103,3 +103,11 @@ To disable, set to empty list.
 Specifies how deep the ToC should be.
 
 Default: `2`
+
+## `force-cool-start`
+
+`bool`
+
+If overridden to be set to `true`, forces a cool page start to display.
+
+Default: unset

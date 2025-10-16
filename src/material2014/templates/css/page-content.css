@@ -87,7 +87,7 @@
     ul li {
         list-style: square!important;
     }
-    ul {
+    ul:not(.tabs, .collection) {
         padding-inline-start: 40px;
     }
 }

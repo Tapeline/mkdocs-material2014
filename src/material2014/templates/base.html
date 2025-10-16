@@ -1,3 +1,15 @@
+{% set ns = namespace(display_cool_start=true) %}
+{% if
+  config.theme.cool_page_start_only_section
+  and page.parent
+  and page.parent.children
+  and page.parent.children[0]
+  and page.parent.children[0].url != page.url
+%}
+  {% set ns.display_cool_start = false %}
+{% endif %}
+{% set ns.display_cool_start = ns.display_cool_start or page.meta["force-cool-start"] %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +31,11 @@
         {% endif %}
     }
   </style>
-  <script>var base_url = {{ base_url|tojson }};</script>
+  <script>
+      var base_url = {{ base_url|tojson }};
+      var use_cool_start = false;
+      {% if ns.display_cool_start %} use_cool_start = true {% endif %};
+  </script>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -40,7 +56,12 @@
 </head>
 
 <body class="d-syntax-scheme-{{config.theme.syntax_scheme}}">
-<div class="navbar-fixed d-seamless-cool-page-navbar d-no-text-cool-page-navbar">
+<div class="
+  navbar-fixed
+  {%if ns.display_cool_start%}
+  d-seamless-cool-page-navbar d-no-text-cool-page-navbar
+  {%endif%}
+">
   <nav class="sidebar-aware">
     <div class="nav-wrapper" style="justify-content: space-between">
       <span>
@@ -111,7 +132,7 @@
             {% for sub_item in nav_item.children %}
             {% if sub_item.children %}
             {% set count = sub_item.children|count %}
-            <div class="d-secondary-collapsible">
+            <div class="d-secondary-collapsible {% if sub_item.active %}d-active{% endif %}">
               <div class="d-secondary-collapsible-header">{{sub_item.title}}</div>
               <div class="d-secondary-collapsible-content"
                 style="--calc-max-h: {{48 * count}}px">

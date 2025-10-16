@@ -40,6 +40,7 @@ $(document).ready(function () {
 });
 
 $(document).scroll(function () {
+    if (!use_cool_start) return;
     $('.navbar-fixed').removeClass("no-transition");
     if ($(document).scrollTop() >= 180 && $(".d-cool-page-start").length) {
         $('.navbar-fixed').removeClass("d-no-text-cool-page-navbar");

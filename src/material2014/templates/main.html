@@ -2,9 +2,15 @@
 
 {% block content %}
 <main class="sidebar-aware">
+  {% if ns.display_cool_start %}
   <div class="d-cool-page-start white-text">
+    {% if page.parent %}
+    <span>{{ page.parent.title }}</span>
+    {% else %}
     <span>{{ page.title }}</span>
+    {% endif %}
   </div>
+  {% endif %}
   <div class="d-page row">
     {% if page.meta["hide-toc"] %}
     <div class="d-content col s12 m8 l8">
