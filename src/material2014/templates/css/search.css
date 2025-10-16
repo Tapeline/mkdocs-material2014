@@ -24,4 +24,11 @@
         line-height: 1.5!important;
     }
     justify-content: start!important;
+    .input-field .active {
+        color: var(--d-page-primary-color);
+    }
+    input:focus {
+        border-bottom: 1px solid var(--d-page-primary-color)!important;
+        box-shadow: 0 1px 0 0 var(--d-page-primary-color)!important;
+    }
 }
