@@ -79,30 +79,14 @@
       </span>
       <div>
         {% if 'search' in config.plugins %}
-        <form class="d-search-form inherit-nav-height" action="search.html">
-          <button class="btn-flat d-search-button inherit-nav-height">
-            <i class="material-icons">search</i>
-          </button>
-          <input
-            name="q"
-            type="text"
-            class="d-search-input inherit-nav-height"
-            id="mkdocs-search-query"
-            placeholder="Search"
-            autocomplete="off"/>
-          <button class="btn-flat d-search-close-button inherit-nav-height">
-            <i class="material-icons">close</i>
-          </button>
-        </form>
+        <a href="#" data-target="search-sidenav" class="sidenav-trigger show-on-large">
+          <i class="material-icons">search</i>
+        </a>
         {% endif %}
       </div>
     </div>
   </nav>
 </div>
-
-{% if 'search' in config.plugins %}
-<div class="d-search-results card" id="mkdocs-search-results"></div>
-{% endif %}
 
 <div id="slide-out" class="sidenav sidenav-fixed">
   <div>
@@ -177,6 +161,28 @@
 </div>
 
 {% block content %}{% endblock %}
+
+{% if 'search' in config.plugins %}
+<ul class="sidenav" id="search-sidenav">
+  <li>
+    <div class="input-field">
+      <i class="material-icons prefix">search</i>
+      <input
+        name="q"
+        id="mkdocs-search-query"
+        type="text"
+        autocomplete="off"
+        required>
+      <label for="mkdocs-search-query">
+        Search
+      </label>
+    </div>
+  </li>
+  <li>
+    <div id="mkdocs-search-results"></div>
+  </li>
+</ul>
+{% endif %}
 
 <div id="ezglossary-modal" class="modal bottom-sheet d-glossary-def-sheet">
   <div class="d-glossary-def-sheet-header">

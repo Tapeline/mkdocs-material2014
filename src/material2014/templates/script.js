@@ -1,6 +1,5 @@
 $(document).ready(function () {
     initMaterializeCssComponents();
-    initSearch();
     if (!$(".d-cool-page-start").length) {
         $('.navbar-fixed').removeClass("d-seamless-cool-page-navbar");
     }
@@ -33,19 +32,11 @@ $(document).scroll(function () {
     }
 });
 
-function initSearch() {
-    $(".d-search-button").click(e => {
-        e.preventDefault();
-        $("body").addClass("d-search-open");
-    });
-    $(".d-search-close-button").click(e => {
-        e.preventDefault();
-        $("body").removeClass("d-search-open");
-    });
-}
-
 function initMaterializeCssComponents() {
-    $('.sidenav').sidenav();
+    $('.sidenav:not(#search-sidenav)').sidenav();
+    $('#search-sidenav').sidenav({
+       edge: "right"
+    });
     $('.modal').modal();
     $('.collapsible.expandable').collapsible({
         accordion: false
@@ -59,12 +50,6 @@ function initMaterializeCssComponents() {
 }
 
 function initGlossary() {
-    // $('.mkdocs-ezglossary-link').addClass("tooltipped");
-    // $('.mkdocs-ezglossary-link').each((i, obj) => {
-    //     obj = $(obj);
-    //     obj.attr("data-tooltip", obj.attr("title"));
-    //     obj.attr("title", null);
-    // });
     const glossaryModal = M.Modal.getInstance(
         document.getElementById("ezglossary-modal")
     );
