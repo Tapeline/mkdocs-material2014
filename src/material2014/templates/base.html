@@ -29,6 +29,7 @@
         {% else %}
         --d-page-primary-color: {{ config.theme.primary_color }};
         {% endif %}
+        --d-glossary-header-bg: {{ config.theme.glossary_header_bg }};
     }
   </style>
   <script>
@@ -176,6 +177,23 @@
 </div>
 
 {% block content %}{% endblock %}
+
+<div id="ezglossary-modal" class="modal bottom-sheet d-glossary-def-sheet">
+  <div class="d-glossary-def-sheet-header">
+    <h5 id="ezglossary-modal-header"></h5>
+  </div>
+  <div class="modal-content">
+    <div id="ezglossary-modal-content"></div>
+    <a href="" id="ezglossary-modal-link">Open in glossary</a>
+  </div>
+</div>
+<div id="abbr-modal" class="modal bottom-sheet d-glossary-def-sheet">
+  <div class="d-glossary-def-sheet-header">
+    <h5 id="abbr-modal-header"></h5>
+  </div>
+  <div class="modal-content" id="abbr-modal-content">
+  </div>
+</div>
 
 {%- for script in config.extra_javascript %}
   {{ script | script_tag }}

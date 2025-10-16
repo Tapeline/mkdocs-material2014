@@ -107,6 +107,7 @@ Right aligned columns
 
 Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
+This is a link to a <term:Term 1>.
 
 ## Images
 

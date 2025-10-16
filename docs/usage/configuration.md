@@ -57,6 +57,12 @@ Syntax scheme to use for highlighting. Options:
 
 Default: `material`
 
+## `glossary_header_bg`
+
+Background color for glossary modal header.
+
+Default: `"#FFC107"`
+
 
 # Page config
 
