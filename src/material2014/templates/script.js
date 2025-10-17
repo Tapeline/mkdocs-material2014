@@ -4,7 +4,7 @@ $(document).ready(function () {
         $('.navbar-fixed').removeClass("d-seamless-cool-page-navbar");
     }
     $(".d-toc-wrapper").pushpin({
-        top: 320,
+        top: use_cool_start? 320 : 80,
         offset: 64
     });
     initGlossary();
@@ -19,13 +19,15 @@ $(document).ready(function () {
 
 $(document).scroll(function () {
     if (!use_cool_start) return;
+    const threshA = $(window).width() > 600? 180 : 96;
+    const threshB = $(window).width() > 600? 240 : 150;
     $('.navbar-fixed').removeClass("no-transition");
-    if ($(document).scrollTop() >= 180 && $(".d-cool-page-start").length) {
+    if ($(document).scrollTop() >= threshA && $(".d-cool-page-start").length) {
         $('.navbar-fixed').removeClass("d-no-text-cool-page-navbar");
     } else {
         $('.navbar-fixed').addClass("d-no-text-cool-page-navbar");
     }
-    if ($(document).scrollTop() >= 240 && $(".d-cool-page-start").length) {
+    if ($(document).scrollTop() >= threshB && $(".d-cool-page-start").length) {
         $('.navbar-fixed').removeClass("d-seamless-cool-page-navbar");
     } else {
         $('.navbar-fixed').addClass("d-seamless-cool-page-navbar");
