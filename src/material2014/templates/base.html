@@ -163,8 +163,8 @@
 {% block content %}{% endblock %}
 
 {% if 'search' in config.plugins %}
-<ul class="sidenav" id="search-sidenav">
-  <li>
+<div class="sidenav" id="search-sidenav">
+  <div class="d-search-sidenav-input">
     <div class="input-field">
       <i class="material-icons prefix">search</i>
       <input
@@ -172,16 +172,12 @@
         id="mkdocs-search-query"
         type="text"
         autocomplete="off"
+        placeholder="Search"
         required>
-      <label for="mkdocs-search-query">
-        Search
-      </label>
     </div>
-  </li>
-  <li>
-    <div id="mkdocs-search-results"></div>
-  </li>
-</ul>
+  </div>
+  <div id="mkdocs-search-results"></div>
+</div>
 {% endif %}
 
 <div id="ezglossary-modal" class="modal bottom-sheet d-glossary-def-sheet">
