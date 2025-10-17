@@ -10,7 +10,7 @@ When your documentation is ready, you might want to show it to the world.
 
 To build, simply use mkdocs:
 
-```shell
+``` shell
 mkdocs build
 ```
 
@@ -22,7 +22,7 @@ which you can then host anywhere you'd like.
 You can use GitHub Pages, if your repository is located there already.
 Here is an example GitHub Action to use:
 
-```yml
+``` yaml
 name: Build documentation
 
 on:

@@ -28,7 +28,7 @@ choice, consider choosing one of
 You can consider adding these features to your config, which will help
 your documentation greatly:
 
-```yml
+``` yaml
 plugins:
   - mermaid2
   - ezglossary:

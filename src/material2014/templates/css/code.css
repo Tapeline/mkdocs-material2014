@@ -28,7 +28,8 @@ pre.highlight {
 .d-syntax-scheme-primary-color {
     .token.directive,
     .token.directive-hash,
-    .token.keyword {
+    .token.keyword,
+    .token.key {
         color: var(--d-page-primary-color);
     }
     .token.string {
@@ -39,7 +40,8 @@ pre.highlight {
 .d-syntax-scheme-material {
     .token.directive,
     .token.directive-hash,
-    .token.keyword {
+    .token.keyword,
+    .token.key {
         color: #C2185B;
     }
     .token.string {

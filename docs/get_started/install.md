@@ -11,7 +11,7 @@ pip install mkdocs mkdocs-material2014
 You can consider installing other dependencies, that will help your
 documentation greatly:
 
-```shell
+``` shell
 pip install mkdocs-material2014[extras]
 ```
 

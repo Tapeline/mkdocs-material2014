@@ -34,7 +34,7 @@ theme:
   footer_links:
     Debug page: /mkdocs-material2014/debug
     Testing: /mkdocs-material2014/test/home
-  syntax_scheme: material
+  syntax_scheme: primary-color
 
 plugins:
   - macros:
